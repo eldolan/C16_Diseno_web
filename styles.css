@@ -42,5 +42,23 @@
 	line-height: 1;
 	width: 2.5rem;
 	height: 2.5rem;
-
+}
+.formulario{
+	font-family: 'Poppins', 'SansSerif', Times, serif;
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	padding: 1.25rem;
+	border-radius: 0.625rem;
+	margin: auto;
+	width: 20rem;
+}
+.form-control{
+	background-color: rgba(250,250,250,0.6);
+	margin-bottom: 0.625rem;
+}
+.form-label{
+	font-family: 'Poppins', 'SansSerif', Times, serif;
+	color: #ffffff;
+	font-size: 1.3rem;
 }
