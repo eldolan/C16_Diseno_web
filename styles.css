@@ -1,0 +1,46 @@
+
+.bg-custom-color {
+	background-color: rgba(134.00000721216202, 47.0000009983778, 47.0000009983778, 1);
+}
+.letras {
+	color: rgba(255, 255, 255, 1);
+	font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 2.23rem;
+	text-decoration: none;
+}
+
+ body, html {
+	 height: 100%;
+	 margin: 0;
+	 padding: 0;
+ }
+
+.background-image {
+	background-image: url("img/background.png");
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+
+.logo {
+	display: inline-flex;
+}
+
+.logo-svg {
+	width: 4rem;
+	height: 4rem;
+	fill: white;
+	margin-right: 0.625rem;
+	position: relative;
+}
+.logo-text {
+	color: rgba(134.00000721216202, 47.0000009983778, 47.0000009983778, 1);
+	font-size: 2rem;
+	margin: 0;
+	line-height: 1;
+	width: 2.5rem;
+	height: 2.5rem;
+
+}
