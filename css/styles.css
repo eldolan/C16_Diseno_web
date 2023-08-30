@@ -6,9 +6,13 @@
 	color: rgba(255, 255, 255, 1);
 	font-family: 'EB Garamond', 'Times New Roman', Times, serif;
 	display: inline-block;
-	margin-right: 20px;
-	font-size: 2.23rem;
+	margin-right: 1.25rem;
+	letter-spacing: 0;
+	font-size: 1.875rem;
+	font-weight: 50;
 	text-decoration: none;
+	width: 9.625rem;
+	height: 2.5rem;
 }
 
  body, html {
@@ -18,7 +22,7 @@
  }
 
 .background-image {
-	background-image: url("img/background.png");
+	background-image: url("../img/background.png");
 	background-size: cover;
 	background-position: center;
 	height: 100%;
@@ -43,22 +47,4 @@
 	width: 2.5rem;
 	height: 2.5rem;
 }
-.formulario{
-	font-family: 'Poppins', 'SansSerif', Times, serif;
-	color: #ffffff;
-	display: flex;
-	flex-direction: column;
-	padding: 1.25rem;
-	border-radius: 0.625rem;
-	margin: auto;
-	width: 20rem;
-}
-.form-control{
-	background-color: rgba(250,250,250,0.6);
-	margin-bottom: 0.625rem;
-}
-.form-label{
-	font-family: 'Poppins', 'SansSerif', Times, serif;
-	color: #ffffff;
-	font-size: 1.3rem;
-}
+
