@@ -5,8 +5,6 @@
 .letras {
 	color: rgba(255, 255, 255, 1);
 	font-family: 'EB Garamond', 'Times New Roman', Times, serif;
-	display: inline-block;
-	margin-right: 1.25rem;
 	letter-spacing: 0;
 	font-size: 1.875rem;
 	font-weight: 50;
@@ -14,12 +12,6 @@
 	width: 9.625rem;
 	height: 2.5rem;
 }
-
- body, html {
-	 height: 100%;
-	 margin: 0;
-	 padding: 0;
- }
 
 .background-image {
 	background-image: url("../img/background.png");
