@@ -4,10 +4,10 @@
 }
 .letras {
 	color: rgba(255, 255, 255, 1);
-	font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+	font-family: 'Roboto', 'Times New Roman', Times, serif;
 	letter-spacing: 0;
 	font-size: 1.875rem;
-	font-weight: 50;
+	font-weight: normal;
 	text-decoration: none;
 	width: 9.625rem;
 	height: 2.5rem;

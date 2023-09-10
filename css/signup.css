@@ -6,9 +6,10 @@
     height: 100%;
 }
 .titulo {
-    font-family: 'DM serif display', 'Times New Roman', Times, serif;
+    font-family: 'Roboto', 'Sans Serif', Times, serif;
     color: #ffffff;
     font-size: 4.375rem;
+    font-weight: bolder;
 }
 
 .formulario{

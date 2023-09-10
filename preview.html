@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/signup.css">
 </head>
@@ -15,25 +17,23 @@
 <header class = "custom-header bg-custom-color py-4">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="col">
-                <div class="logo">
-                    <div class="logo-svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                            <rect x="10" y="10" width="30" height="30" fill="white" />
-                        </svg>
-                        <h1 class="logo-text"></h1>
-                    </div>
-                </div>
-                <a href="#" class="letras">Catálogo</a>
-                <a href="signup.html" class="letras">Contacto</a>
-                <a href="#" class="letras">Preguntas</a>
+            <div class="col-1 justify-content-start">
+                <img class="img-fluid" src="img/Logo.png" alt="New York">
+            </div>
+            <div class="col-1 d-flex justify-content-start">
+                <a href="#" class="letras mx-5">Catálogo</a>
+                <a href="#" class="letras mx-5">Contacto</a>
+                <a href="#" class="letras mx-5">Preguntas</a>
+            </div>
+            <div class="col-10 d-flex justify-content-end">
+                <button type="button" class="btn btn-info btn-lg justify-content-end"  data-toggle="modal" data-target="#myModal">Iniciar sesion</button>
             </div>
         </div>
     </div>
 </header>
 
 <body>
-<div class="bg-image" style="background-image: url('img/pexels-abby-chung-1106468 1.png'); height: 86vh">
+<div class="bg-image" style="background-image: url('img/pexels-abby-chung-1106468 1.png'); height: 87.4vh; background-position: center; background-repeat: no-repeat;background-size: cover;">
     <div class="row">
         <div class="col-lg-2 mx-5 my-5">
             <div class="card mb-4">
@@ -97,10 +97,10 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-4 my-4 btn-group">
-                    <a type="button" href="signup4.html" class="px-5 me-5 btncancelar">Volver</a>
-                    <a type="button" href="#" class="px-5 ms-5 btncontinuar">Continuar</a>
+            <div class="row">
+                <div class="col-lg-12 my-4 btn-group justify-content-center">
+                    <a type="button" href="signup4.html" class="px-4 me-5 btncancelar col-3 text-center">Volver</a>
+                    <a type="button" href="#" class="px-4 ms-5 btncontinuar col-3 text-center">Continuar</a>
                 </div>
             </div>
         </div>
