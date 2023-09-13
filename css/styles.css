@@ -39,4 +39,16 @@
 	width: 2.5rem;
 	height: 2.5rem;
 }
-
+.texto-titulo {
+	font-family: 'DM serif display', 'Sans Serif', Times, serif;
+	color: rgba(239, 233, 206, 1);
+	height: 385px;
+	font-size: 96px;
+}
+.texto-subtitulo{
+	font-family: 'DM serif display', 'Sans Serif', Times, serif;
+	color: rgb(255, 255, 255);
+	height: 385px;
+	font-size: 30px;
+	font-weight: lighter;
+}
