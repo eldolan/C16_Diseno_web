@@ -23,6 +23,14 @@
             font-family: "ofl Sorts Mill Goudy TT", serif;
             font-size: larger;
         }
+        #background-filter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.35); /* Filtro de brillo al 35% */
+        }
         /* Estilo para los bordes de los inputs al pasar el cursor sobre ellos */
         input[type="text"]:not(#buscar):hover,
         input[type="password"]:hover,
@@ -41,6 +49,10 @@
         }
     </style>
 </head>
+
+
+
+<body>
 
 <header>
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #862F2F;">
@@ -79,38 +91,44 @@
     </nav>
 </header>
 
-<body>
 <div class="container-fluid">
-    <h1 class="text-center titulo" style="font-weight: normal">Registro</h1>
+    <h1 class="text-center my-5 titulo display-1" style="font-weight: normal">Registro</h1>
     <div class="row justify-content-center my-5">
         <div class="col-lg-3">
             <form action ="#">
                 <div class="row justify-content-center formulario mb-3">
-                    <label for="telefono">Telefono</label>
-                    <input type="text" class="form-control" id="telefono" name="telefono" style="height: 95px">
+                    <label for="telefono" class="fs-1">Telefono</label>
+                    <input type="text" class="form-control1 fs-1" id="telefono" name="telefono" style="height: 95px">
                 </div>
                 <div class="row justify-content-center formulario mt-3">
-                    <label for="correo">Correo electronico</label>
-                    <input type="text" class="form-control" id="correo" name="correo" style="height: 95px">
+                    <label for="correo" class="fs-1">Correo electronico</label>
+                    <input type="text" class="form-control1 fs-1" id="correo" name="correo" style="height: 95px">
                 </div>
             </form>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 my-4 btn-group justify-content-center">
-                <a type="button" href="signup2.html" class="px-4 me-5 btncancelar col-3 text-center">Volver</a>
-                <a type="button" href="signup4.html" class="px-4 ms-5 btncontinuar col-3 text-center">Continuar</a>
+            <div class="col-md-6 my-5 d-flex justify-content-md-end justify-content-center">
+                <a type="button" href="signup2.html" class="btn btncancelar mx-5 w-50 fs-1 btn">Volver</a>
+            </div>
+            <div class="col-md-6 my-5 d-flex justify-content-md-start justify-content-center">
+                <a type="button" href="signup4.html" class="btn btncontinuar mx-5 w-50 fs-1 btn">finalizar</a>
             </div>
         </div>
     </div>
-   </div>
-</body>
-<footer>
-    <div class="progress">
-        <div class="progress-bar" style="width: 50%">
+</div>
 
+<div class="row fixed-bottom mb-0">
+    <div class="col">
+        <div class="progress">
+            <div class="progress-bar" style="width: 50%"></div>
         </div>
     </div>
-</footer>
+</div>
+
+<div id="background-filter" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.35); z-index: -1;"></div>
+
+</body>
+
 </html>

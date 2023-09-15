@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes de Préstamo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/solicitud.css">
+    <style>
+        /* Estilo para el fondo con filtro de brillo */
+        body {
+            background-image: url('img/background.png');
+            background-size: cover;
+        }
+        /* Cambiar la fuente de los enlaces superiores */
+        .navbar-nav .nav-link {
+            font-family: "ofl Sorts Mill Goudy TT", serif;
+            font-size: larger;
+        }
+        /* Estilo para los bordes de los inputs al pasar el cursor sobre ellos */
+        input[type="text"]:not(#buscar):hover,
+        input[type="password"]:hover,
+        select:hover,
+        datalist:hover {
+            border-color: #862F2F; /* Cambia el color del borde al pasar el cursor */
+        }
+        /* Estilo para el texto en blanco */
+        h2, p {
+            color: white; /* Cambia el color del texto a blanco */
+        }
+
+        /* Estilo para la barra de los inputs */
+        input[type="text"], input[type="password"], select, datalist {
+            background-color: white; /* Cambia el color de fondo de los inputs a blanco */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #862F2F;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)">
+                <img src="img/logo.png" alt="Logo" style="border-radius: 20px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Catálogo</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Catalogo.html">Consulta</a></li>
+                            <li><a class="dropdown-item" href="CatalogoLibros.html">Libros</a></li>
+                            <li><a class="dropdown-item" href="CatalogoMultimedia.html">Multimedia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Preguntas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FichaPerfil.html">Perfil</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Bibliotecario</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="solicitudes.html">Solicitudes de Préstamo</a></li>
+                            <li><a class="dropdown-item" href="rprestamo.html">Registros</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" id="buscar" placeholder="Buscar" style="border-radius: 50px;">
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container-fluid">
+    <h2 class="text-center display-3 my-5 titulo-solicitudes">Solicitudes de Préstamo</h2>
+    <div id="solicitudes-list">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8">
+                <div class="table-container">
+                    <table class="table fs-5 tabla-solicitudes">
+                        <thead>
+                            <tr>
+                            <th>Usuario</th>
+                            <th>Documento</th>
+                            <th>Fecha de Solicitud</th>
+                            <th>Fecha de Préstamo/Devolución</th>
+                            <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Usuario 1</td>
+                            <td>Libro 1</td>
+                            <td>10-09-2023</td>
+                            <td>14-09-2023/05-10-2023</td>
+                            <td>
+                                <button type="button" class="btnaceptar col-sm-2 col-lg-5 my-1" onclick="aceptarSolicitud(this)">Aceptar</button>
+                                <button type="button" class="btnrechazar col-sm-2 col-lg-5 my-1" onclick="rechazarSolicitud(this)">Rechazar</button>
+                                <p class="estado-solicitud"></p>
+                                <div class="observacion-div" style="display: none;">
+                                    <input type="text" class="observacion-input" placeholder="Observación">
+                                    <button class="observacion-button" onclick="enviarObservacion(this)">Enviar</button>
+                                </div>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td>Usuario 2</td>
+                            <td>Libro 2</td>
+                            <td>10-09-2023</td>
+                            <td>18-09-2023/05-10-2023</td>
+                            <td>
+                                <button type="button" class="btnaceptar col-sm-2 col-lg-5 my-1" onclick="aceptarSolicitud(this)">Aceptar</button>
+                                <button type="button" class="btnrechazar col-sm-2 col-lg-5 my-1" onclick="rechazarSolicitud(this)">Rechazar</button>
+                                <p class="estado-solicitud"></p>
+                                <div class="observacion-div" style="display: none;">
+                                    <input type="text" class="observacion-input" placeholder="Observación">
+                                    <button class="observacion-button" onclick="enviarObservacion(this)">Enviar</button>
+                                </div>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function aceptarSolicitud(button) {
+        const row = button.closest('tr');
+        const estadoSolicitud = row.querySelector('.estado-solicitud');
+        const observacionDiv = row.querySelector('.observacion-div');
+        const btnAceptar = row.querySelector('.btnaceptar');
+        const btnRechazar = row.querySelector('.btnrechazar');
+
+        estadoSolicitud.textContent = 'Solicitud Aprobada';
+        estadoSolicitud.style.color = 'green';
+
+        btnAceptar.style.display = 'none';
+        btnRechazar.style.display = 'none';
+
+        observacionDiv.style.display = 'block';
+    }
+    function rechazarSolicitud(button) {
+        const row = button.closest('tr');
+        const estadoSolicitud = row.querySelector('.estado-solicitud');
+        const observacionDiv = row.querySelector('.observacion-div');
+        const btnAceptar = row.querySelector('.btnaceptar');
+        const btnRechazar = row.querySelector('.btnrechazar');
+
+        estadoSolicitud.textContent = 'Solicitud Rechazada';
+        estadoSolicitud.style.color = 'red';
+
+        btnAceptar.style.display = 'none';
+        btnRechazar.style.display = 'none';
+
+        observacionDiv.style.display = 'block';
+    }
+    function enviarObservacion(button) {
+        const row = button.closest('tr');
+        const observacionDiv = row.querySelector('.observacion-div');
+        const observacionInput = row.querySelector('.observacion-input');
+
+        row.style.display = 'none';
+    }
+</script>
+</body>
+</html>
