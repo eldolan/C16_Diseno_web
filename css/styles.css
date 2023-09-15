@@ -13,32 +13,6 @@
 	height: 2.5rem;
 }
 
-.background-image {
-	background-image: url("../img/background.png");
-	background-size: cover;
-	background-position: center;
-	height: 100%;
-}
-
-.logo {
-	display: inline-flex;
-}
-
-.logo-svg {
-	width: 4rem;
-	height: 4rem;
-	fill: white;
-	margin-right: 0.625rem;
-	position: relative;
-}
-.logo-text {
-	color: rgba(134.00000721216202, 47.0000009983778, 47.0000009983778, 1);
-	font-size: 2rem;
-	margin: 0;
-	line-height: 1;
-	width: 2.5rem;
-	height: 2.5rem;
-}
 .texto-titulo {
 	font-family: 'DM serif display', 'Sans Serif', Times, serif;
 	color: rgba(239, 233, 206, 1);
@@ -53,7 +27,7 @@
 	font-weight: lighter;
 }
 .btncontinuar{
-	background-color: rgba(134, 47, 47, 1);
+	background-color: rgba(134, 47, 47, 0);
 	border-radius: 3.125rem;
 	font-family: 'Poppins', 'SansSerif', Times, serif;
 	color: #ffffff;
@@ -61,6 +35,7 @@
 	letter-spacing: 0;
 	line-height: 2.813;
 	text-decoration: none;
+	border-color: #ffffff;
 }
 .btniniciar{
 	background-color: rgb(134, 47, 47,1);
@@ -92,4 +67,10 @@
 	line-height: 2.813rem;
 	font-weight: lighter;
 	font-size: 1.875rem;
+}
+.btnregistrar{
+	font-family: 'Poppins', 'SansSerif', Times, serif;
+	color: #ffffff;
+	font-size: 1.875rem;
+	line-height: 2.813;
 }

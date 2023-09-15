@@ -5,101 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libreria</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swa" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/signup.css">
+
+    <style>
+        /* Estilo para el fondo con filtro de brillo */
+        body {
+            background-image: url('img/un-aplauso-para-las-librerias.jpg');
+            background-size: cover;
+        }
+        /* Cambiar la fuente de los enlaces superiores */
+        .navbar-nav .nav-link {
+            font-family: "ofl Sorts Mill Goudy TT", serif;
+            font-size: larger;
+        }
+        /* Estilo para los bordes de los inputs al pasar el cursor sobre ellos */
+        input[type="text"]:not(#buscar):hover,
+        input[type="password"]:hover,
+        select:hover,
+        datalist:hover {
+            border-color: #862F2F; /* Cambia el color del borde al pasar el cursor */
+        }
+        /* Estilo para el texto en blanco */
+        h2, p {
+            color: white; /* Cambia el color del texto a blanco */
+        }
+
+        /* Estilo para la barra de los inputs */
+        input[type="text"], input[type="password"], select, datalist {
+            background-color: white; /* Cambia el color de fondo de los inputs a blanco */
+        }
+    </style>
 </head>
 
-<header class = "custom-header bg-custom-color py-4">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-1 justify-content-start">
-                <img class="img-fluid" src="img/Logo.png" alt="New York">
-            </div>
-            <div class="col-1 d-flex justify-content-start">
-                <a href="#" class="letras mx-3">Catálogo</a>
-                <a href="#" class="letras mx-3">Contacto</a>
-                <a href="#" class="letras mx-3">Preguntas</a>
-            </div>
-            <div class="col-10 d-flex justify-content-end">
-                <button type="button" class="btn btn-info btn-lg justify-content-end"  data-toggle="modal" data-target="#myModal">Iniciar sesion</button>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #862F2F;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)">
+                <img src="img/logo.png" alt="Logo" style="border-radius: 20px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Catálogo</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Catalogo.html">Consulta</a></li>
+                            <li><a class="dropdown-item" href="CatalogoLibros.html">Libros</a></li>
+                            <li><a class="dropdown-item" href="CatalogoMultimedia.html">Multimedia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Preguntas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FichaPerfil.html">Perfil</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" id="buscar" placeholder="Buscar" style="border-radius: 50px;">
+                </form>
             </div>
         </div>
-    </div>
+    </nav>
 </header>
 
 <body>
-<div class="bg-image" style="background-image: url('img/pexels-abby-chung-1106468 1.png'); height: 87.4vh; background-position: center; background-repeat: no-repeat;background-size: cover;">
-    <div class="row">
-        <div class="col-lg-2 mx-5 my-5" style="opacity: 80%">
-            <div class="card mb-4">
-                <div class="card-body text-center">
-                    <img src="img/Profile_avatar_placeholder_large.png" alt="avatar"
-                         class="rounded img-fluid" style="width: 150px;">
-                    <h5 class="my-3">Alexis Sanchez</h5>
-                    <p class="text-muted mb-1">Extra</p>
-                    <p class="text-muted mb-4">Extra</p>
+<div class="row">
+    <div class="col-lg-2 mx-5 my-5">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <img src="img/img_avatar1.png" alt="avatar"
+                     class="rounded img-fluid" style="width: 150px;">
+                <h5 class="my-3">Alexis Sanchez</h5>
+                <p class="text-muted mb-1">Extra</p>
+                <p class="text-muted mb-4">Extra</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8 mx-5 my-5">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Nombre Completo</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">Alexis Sanchez</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Correo</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">niñomaravilla2015@gmail.com</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Telefono</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">9 6969 6669</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Rut</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">16.927.586-6</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Direccion</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">Tocopilla, donde sea que quede</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-8 mx-5 my-5" style="opacity: 80%">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <p class="mb-0">Nombre Completo</p>
-                        </div>
-                        <div class="col-sm-9">
-                            <p class="text-muted mb-0">Alexis Sanchez</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <p class="mb-0">Correo</p>
-                        </div>
-                        <div class="col-sm-9">
-                            <p class="text-muted mb-0">niñomaravilla2015@gmail.com</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <p class="mb-0">Telefono</p>
-                        </div>
-                        <div class="col-sm-9">
-                            <p class="text-muted mb-0">9 6969 6669</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <p class="mb-0">Rut</p>
-                        </div>
-                        <div class="col-sm-9">
-                            <p class="text-muted mb-0">16.927.586-6</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <p class="mb-0">Direccion</p>
-                        </div>
-                        <div class="col-sm-9">
-                            <p class="text-muted mb-0">Tocopilla, donde sea que quede</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 my-4 btn-group justify-content-center">
-                    <a type="button" href="signup4.html" class="px-4 me-5 btncancelar col-3 text-center">Volver</a>
-                    <a type="button" href="#" class="px-4 ms-5 btncontinuar col-3 text-center">Continuar</a>
-                </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 my-4 btn-group justify-content-center">
+                <a type="button" href="signup4.html" class="px-4 me-5 btncancelar col-3 text-center">Volver</a>
+                <a type="button" href="#" class="px-4 ms-5 btncontinuar col-3 text-center">Continuar</a>
             </div>
         </div>
     </div>
