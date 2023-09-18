@@ -9,14 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swa" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/signup.css">
 
     <style>
         /* Estilo para el fondo con filtro de brillo */
         body {
-            background-image: url('img/un-aplauso-para-las-librerias.jpg');
+            background-image: url('../img/un-aplauso-para-las-librerias.jpg');
             background-size: cover;
+        }
+        /* Cambiar la fuente de los enlaces superiores */
+        .navbar-nav .nav-link {
+            font-family: "ofl Sorts Mill Goudy TT", serif;
+            font-size: larger;
         }
         #background-filter {
             position: absolute;
@@ -25,11 +30,6 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.35); /* Filtro de brillo al 35% */
-        }
-        /* Cambiar la fuente de los enlaces superiores */
-        .navbar-nav .nav-link {
-            font-family: "ofl Sorts Mill Goudy TT", serif;
-            font-size: larger;
         }
         /* Estilo para los bordes de los inputs al pasar el cursor sobre ellos */
         input[type="text"]:not(#buscar):hover,
@@ -50,14 +50,13 @@
     </style>
 </head>
 
-
 <body>
 
 <header>
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #862F2F;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="javascript:void(0)">
-                <img src="img/logo.png" alt="Logo" style="border-radius: 20px;">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo" style="border-radius: 20px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -67,9 +66,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Catálogo</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="Catalogo.html">Consulta</a></li>
-                            <li><a class="dropdown-item" href="CatalogoLibros.html">Libros</a></li>
-                            <li><a class="dropdown-item" href="CatalogoMultimedia.html">Multimedia</a></li>
+                            <li><a class="dropdown-item" href="../catalogo/Catalogo.html">Consulta</a></li>
+                            <li><a class="dropdown-item" href="../catalogo/CatalogoLibros.html">Libros</a></li>
+                            <li><a class="dropdown-item" href="../catalogo/CatalogoMultimedia.html">Multimedia</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -79,7 +78,7 @@
                         <a class="nav-link" href="javascript:void(0)">Preguntas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="FichaPerfil.html">Perfil</a>
+                        <a class="nav-link" href="../cliente/FichaPerfil.html">Perfil</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -90,19 +89,18 @@
     </nav>
 </header>
 
-
 <div class="container-fluid">
-    <h1 class="text-center my-5 display-1 titulo" style="font-weight: normal">Registro</h1>
+    <h1 class="text-center my-5 titulo display-1" style="font-weight: normal">Registro</h1>
     <div class="row justify-content-center my-5">
         <div class="col-lg-3">
-            <form action ="#">
+            <form action="#">
                 <div class="row justify-content-center formulario mb-3">
-                    <label for="rut" class="fs-1">Rut</label>
-                    <input type="text" class="form-control1 fs-1" id="rut" name="rut" style="height: 95px">
+                    <label for="password" class="fs-1">Contraseña</label>
+                    <input type="password" class="form-control1 fs-1" id="password" name="password" style="height: 95px">
                 </div>
                 <div class="row justify-content-center formulario mt-3">
-                    <label for="direccion" class="fs-1">Direccion</label>
-                    <input type="text" class="form-control1 fs-1" id="direccion" name="direccion" style="height: 95px">
+                    <label for="Cpassword" class="fs-1">Confirmar contraseña</label>
+                    <input type="password" class="form-control1 fs-1" id="Cpassword" name="password" style="height: 95px">
                 </div>
             </form>
         </div>
@@ -110,25 +108,24 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 my-5 d-flex justify-content-md-end justify-content-center">
-                <a type="button" href="signup.html" class="btn btncancelar mx-5 w-50 fs-1 btn-lg">Volver</a>
+                <a type="button" href="signup3.html" class="btn btncancelar mx-5 w-50 fs-1 btn">Volver</a>
             </div>
             <div class="col-md-6 my-5 d-flex justify-content-md-start justify-content-center">
-                <a type="button" href="signup3.html" class="btn btncontinuar mx-5 w-50 fs-1 btn-lg">Continuar</a>
+                <a type="button" href="preview.html" class="btn btncontinuar mx-5 w-50 fs-1 btn">Siguiente</a>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row fixed-bottom mb-0">
+<div class="row fixed-bottom">
     <div class="col">
         <div class="progress">
-            <div class="progress-bar" style="width: 25%"></div>
+            <div class="progress-bar" style="width: 75%"  ></div>
         </div>
     </div>
 </div>
 
 <div id="background-filter" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.35); z-index: -1;"></div>
+
 </body>
-
-
 </html>

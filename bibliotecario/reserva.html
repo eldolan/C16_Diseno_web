@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registros de Préstamo</title>
+    <title>Reserva de Documentos</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/solicitud.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/solicitud.css">
     <style>
         /* Estilo para el fondo con filtro de brillo */
         body {
-            background-image: url('img/background.png');
+            background-image: url('../img/background.png');
             background-size: cover;
         }
         /* Cambiar la fuente de los enlaces superiores */
@@ -40,11 +40,12 @@
     </style>
 </head>
 <body>
+
 <header>
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #862F2F;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="javascript:void(0)">
-                <img src="img/logo.png" alt="Logo" style="border-radius: 20px;">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo" style="border-radius: 20px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -54,9 +55,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Catálogo</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="Catalogo.html">Consulta</a></li>
-                            <li><a class="dropdown-item" href="CatalogoLibros.html">Libros</a></li>
-                            <li><a class="dropdown-item" href="CatalogoMultimedia.html">Multimedia</a></li>
+                            <li><a class="dropdown-item" href="../catalogo/Catalogo.html">Consulta</a></li>
+                            <li><a class="dropdown-item" href="../catalogo/CatalogoLibros.html">Libros</a></li>
+                            <li><a class="dropdown-item" href="../catalogo/CatalogoMultimedia.html">Multimedia</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -66,7 +67,7 @@
                         <a class="nav-link" href="javascript:void(0)">Preguntas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="FichaPerfil.html">Perfil</a>
+                        <a class="nav-link" href="../cliente/FichaPerfil.html">Perfil</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Bibliotecario</a>
@@ -83,46 +84,46 @@
         </div>
     </nav>
 </header>
+
 <div class="container-fluid">
-    <h2 class="text-center display-3 my-5 titulo-solicitudes">Registro de Préstamo</h2>
+    <h2 class="text-center display-3 my-5 titulo-solicitudes">Reservar Documento</h2>
     <div class="row justify-content-center">
-        <div class="col-lg-3">
-            <form>
-                <div class="registroprestamo">
-                    <div class="row justify-content-center mb-3">
-                        <label class="texto-blanco fs-2" for="usuario">Usuario:</label>
-                        <input type="text" class="form-control-prestamo fs-3" id="usuario">
+        <div class="col-6">
+            <div class="reservadocumento">
+                <form>
+                    <div class="row mb-3">
+                        <label class="texto-blanco fs-2" for="documento">Seleccione un documento:</label>
+                        <select class="form-select-documento fs-4" id="documento">
+                            <option value="1">Libro 1</option>
+                            <option value="2">Libro 2</option>
+                        </select>
                     </div>
-                    <div class="row justify-content-center mb-3">
-                        <label class="texto-blanco fs-2" for="documento">Documento:</label>
-                        <input type="text" class="form-control-prestamo fs-3" id="documento" style="height: 2.8125rem">
+                    <div class="row mb-3">
+                        <label class="texto-blanco fs-2" for="fecha">Fecha de reserva:</label>
+                        <input type="date" class="form-control-reserva fs-4" id="fecha">
                     </div>
-                    <div class="row justify-content-center mb-3">
-                        <label class="texto-blanco fs-2" for="fecha">Fecha de Préstamo:</label>
-                        <input type="date" class="form-control-prestamo fs-3" id="fecha" style="height: 2.8125rem">
-                    </div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFichaPrestamo">Buscar</button>
-                </div>
-            </form>
+                    <button type="button" class="btn col-sm-2 col-lg-3 fs-4 btn-primary" data-bs-toggle="modal" data-bs-target="#modalReservaDocumento">Reservar</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="modalFichaPrestamo" tabindex="-1" aria-labelledby="modalFichaPrestamoLabel" aria-hidden="true">
+<div class="modal fade" id="modalReservaDocumento" tabindex="-1" aria-labelledby="modalReservaDocumentoLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalFichaPrestamoLabel">Registro del Préstamo</h5>
+                <h5 class="modal-title" id="modalReservaDocumentoLabel">Detalles de la Reserva</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p class="fs-5" style="color: rgba(0,0,0,0.9)">ID del Préstamo: <span id="fichaIdPrestamo"></span></p>
-                <p class="fs-5" style="color: rgba(0,0,0,0.9)">Usuario: <span id="fichaIdEjemplar"></span></p>
-                <p class="fs-5" style="color: rgba(0,0,0,0.9)">Documento: <span id="fichaTitulo"></span></p>
-                <p class="fs-5" style="color: rgba(0,0,0,0.9)">Fecha de Préstamo: <span id="fichaFechaPrestamo"></span></p>
-                <p class="fs-5" style="color: rgba(0,0,0,0.9)">Fecha de Devolución: <span id="fichaFechaDevolucion"></span></p>
+                <p class="fs-5" style="color: rgba(0,0,0,0.9)">ID de Reserva: <span id="reservaId"></span></p>
+                <p class="fs-5" style="color: rgba(0,0,0,0.9)">Usuario: <span id="reservaUsuario"></span></p>
+                <p class="fs-5" style="color: rgba(0,0,0,0.9)">Documento: <span id="reservaDocumento"></span></p>
+                <p class="fs-5" style="color: rgba(0,0,0,0.9)">Fecha de Reserva: <span id="reservaFecha"></span></p>
+                <p class="fs-5" style="color: rgba(0,0,0,0.9)">Las reservas poseen una duración de 7 dias habiles</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn fs-5 btniniciar" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>

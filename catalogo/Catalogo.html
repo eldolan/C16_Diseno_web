@@ -1,24 +1,30 @@
-<!CatalogoConsulta html>
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta Catálogo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-
     <style>
         /* Estilo para el fondo con filtro de brillo */
         body {
-            background-image: url('img/book.jpg');
+            background-image: url('../img/book.jpg');
             background-size: cover;
         }
-
         /* Cambiar la fuente de los enlaces superiores */
         .navbar-nav .nav-link {
             font-family: "ofl Sorts Mill Goudy TT", serif;
             font-size: larger;
         }
-
+        #background-filter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.40); /* Filtro de brillo al 35% */
+        }
         /* Estilo para los bordes de los inputs al pasar el cursor sobre ellos */
         input[type="text"]:not(#buscar):hover,
         input[type="password"]:hover,
@@ -26,39 +32,33 @@
         datalist:hover {
             border-color: #862F2F; /* Cambia el color del borde al pasar el cursor */
         }
-
         /* Estilo para el texto en blanco */
         h2, p {
             color: white; /* Cambia el color del texto a blanco */
             font-size: larger;
         }
-
         /* Estilo para los botones */
         .btn {
             filter: brightness(100%); /* Los botones tienen su brillo normal */
         }
-
         /* Estilo para el botón "Buscar" */
         .btn-primary {
             background-color: #862F2F; /* Cambia el color del botón "Buscar" a #862F2F */
         }
-
         /* Estilo para la barra de los inputs */
         input[type="text"], input[type="password"], select, datalist {
             background-color: white; /* Cambia el color de fondo de los inputs a blanco */
         }
-
-        /* Estilo para la barra de búsqueda */
-        #buscar {
-            margin-top: 20px; /* Ajusta la posición de la barra de búsqueda */
-        }
     </style>
 </head>
+
 <body>
+
+<header>
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #862F2F;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="javascript:void(0)">
-                <img src="img/logo.png" alt="Logo" style="border-radius: 20px;">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo" style="border-radius: 20px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -80,7 +80,7 @@
                         <a class="nav-link" href="javascript:void(0)">Preguntas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="FichaPerfil.html">Perfil</a>
+                        <a class="nav-link" href="../cliente/FichaPerfil.html">Perfil</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -89,62 +89,59 @@
             </div>
         </div>
     </nav>
-
-    <div class="container mt-3">
-        <h2 class="text-center">Consulta Catálogo</h2>
-        <p class="text-center">¿Qué es lo que busca?</p>  
-        <form>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Título" name="Titulo">
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Autor" name="autor">
-                </div>
-            </div> 
-        </form>
-        <p></p>
-        <form>
-            <div class="row">
-                <div class="col">
-                    <select class="form-select">
-                        <option>Año</option>
-                        <option>2019</option>
-                        <option>2018</option>
-                        <option>2017</option>
-                        <option>2016</option>
-                        <option>2015</option>
-                        <option>2014</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Edición" name="Edicion">
-                </div>
+</header>
+<div class="container mt-5">
+    <h1 class="text-center display-3" style="color: #ece3e3">Consulta Catálogo</h1>
+    <p class="text-center fs-3" style="color: #ece3e3">¿Qué es lo que busca?</p>
+    <form>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control mb-3" placeholder="Título" name="Titulo">
             </div>
-        </form>
-        <p></p>
-        <form>
-            <div class="row">
-                <div class="col">
-                    <input class="form-control" list="browsers" name="browser" id="browser" type="text" placeholder="Tipo de Documento">
-                    <datalist id="browsers">
-                        <option value="Libros">
-                        <option value="Película">
-                        <option value="Música">
-                    </datalist>
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Género" name="genero">
-                </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Autor" name="autor">
             </div>
-        </form>
-        <p></p>
-        <div class="text-center mt-3">
-            <button type="button" class="btn btn-secondary mx-auto">Volver</button>
-            <button type="button" class="btn btn-primary mx-auto">Buscar</button>
         </div>
+    </form>
+    <form>
+        <div class="row">
+            <div class="col">
+                <select class="form-select">
+                    <option>Año</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                    <option>2014</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Edición" name="Edicion">
+            </div>
+        </div>
+    </form>
+    <form>
+        <div class="row">
+            <div class="col mt-3">
+                <input class="form-control" list="browsers" name="browser" id="browser" type="text" placeholder="Tipo de Documento">
+                <datalist id="browsers">
+                    <option value="Libros">
+                    <option value="Película">
+                    <option value="Música">
+                </datalist>
+            </div>
+            <div class="col mt-3">
+                <input type="text" class="form-control" placeholder="Género" name="genero">
+            </div>
+        </div>
+    </form>
+    <div class="text-center mt-3">
+        <button type="button" class="btn btn-secondary mx-auto">Volver</button>
+        <button type="button" class="btn btn-primary mx-auto">Buscar</button>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+<div id="background-filter" style="z-index: -1;"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

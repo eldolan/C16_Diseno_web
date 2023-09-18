@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Libros</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/solicitud.css">
+    <style>
+        /* Establece un fondo de imagen con filtro de brillo solo para la imagen de fondo */
+        body {
+            background-image: url('../img/pexels-abby-chung-1106468.jpg');
+            background-size: cover;
+        }
+        /* Aplica un filtro de brillo al 100% solo a la imagen de fondo */
+        #background-filter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Filtro de brillo al 35% */
+        }
+        /* Cambiar la fuente de los enlaces superiores y restablecer el brillo normal */
+        .navbar-nav .nav-link {
+            font-family: "ofl Sorts Mill Goudy TT", serif;
+            filter: brightness(100%); /* Restablecer el brillo normal para las letras de la barra superior */
+            font-size: larger;
+        }
+        /* Aplicar un filtro de brillo al 100% a los elementos de texto específicos */
+        .text-brightness-100 {
+            filter: brightness(100%);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #862F2F;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo" style="border-radius: 20px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Catálogo</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Catalogo.html">Consulta</a></li>
+                            <li><a class="dropdown-item" href="CatalogoLibros.html">Libros</a></li>
+                            <li><a class="dropdown-item" href="CatalogoMultimedia.html">Multimedia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Preguntas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../cliente/FichaPerfil.html">Perfil</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control mt-3 me-2" type="text" placeholder="Buscar" style="border-radius: 50px;">
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container mt-3">
+    <h1 class="text-center display-3 my-5 titulo-solicitudes" style="color: #ece3e3">Solicitudes de Préstamo</h1>
+    <div id="solicitudes-list">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-12">
+                <div class="table-container">
+                    <table class="table fs-5 tabla-solicitudes">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Editorial</th>
+                            <th>Año</th>
+                            <th>Género</th>
+                            <th>Edición</th>
+                            <th>Tipo de Documento</th>
+                            <th>Solicitar</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>745</td>
+                            <td>El Secreto del Bosque Encantado</td>
+                            <td>María Pérez</td>
+                            <td>Libros Mágicos S.A.</td>
+                            <td>2015</td>
+                            <td>Fantasía</td>
+                            <td>Primera</td>
+                            <td>Libro</td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <label class="form-check-label"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>220</td>
+                            <td>Misterio en la Mansión Caldwell</td>
+                            <td>Juan Rodríguez</td>
+                            <td>Editorial Misterio</td>
+                            <td>2020</td>
+                            <td>Misterio</td>
+                            <td>Segunda</td>
+                            <td>Libro</td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check2" name="option2" value="something">
+                                    <label class="form-check-label"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>652</td>
+                            <td>Aventuras en el Espacio Profundo</td>
+                            <td>Laura García</td>
+                            <td>Viaje a las Estrellas Ediciones</td>
+                            <td>2018</td>
+                            <td>Ciencia Ficción</td>
+                            <td>Tercera</td>
+                            <td>Libro</td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check3" name="option3" value="something">
+                                    <label class="form-check-label"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>321</td>
+                            <td>Historia de la Antigua Roma</td>
+                            <td>Carlos López</td>
+                            <td>Historia Viva Editorial</td>
+                            <td>2005</td>
+                            <td>Historia</td>
+                            <td>Quinta</td>
+                            <td>Libro</td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check4" name="option4" value="something">
+                                    <label class="form-check-label"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Título 5</td>
+                            <td>Autor 5</td>
+                            <td>Editorial 5</td>
+                            <td>2023</td>
+                            <td>Género 5</td>
+                            <td>Segunda</td>
+                            <td>Libro</td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check5" name="option5" value="something">
+                                    <label class="form-check-label"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul class="pagination justify-content-center text-brightness-100" style="margin: 20px 0;">
+    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+</ul>
+<div class="text-center mt-3 text-brightness-100">
+    <button type="button" class="btn btn-secondary">Volver</button>
+    <a href="../cliente/SolicitudPrestamo.html">
+        <button type="button" class="btn btn-primary ml-2" style="background-color: #862F2F;">Enviar Solicitud</button>
+    </a>
+</div>
+
+<div id="background-filter" style="z-index: -1;"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
