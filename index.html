@@ -97,7 +97,7 @@
     <div class="row">
         <div class="d-flex justify-content-end">
             <div>
-                <a type="button" href="login/signup.html" class="mt-5 pe-5 me-5 align-items-center display-6 btnregistrar">Registro</a>
+                <a type="button" href="#" class="mt-5 pe-5 me-5 align-items-center display-6 btnregistrar" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Registro</a>
             </div>
         </div>
     </div>
@@ -114,40 +114,6 @@
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-fullscreen modal-dialog-centered">
         <div class="modal-content">
-            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #862F2F;">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="/index.html">
-                        <img src="/img/logo.png" alt="Logo" style="border-radius: 20px;">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar1">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="mynavbar1">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Catálogo</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/catalogo/Catalogo.html">Consulta</a></li>
-                                    <li><a class="dropdown-item" href="/catalogo/CatalogoLibros.html">Libros</a></li>
-                                    <li><a class="dropdown-item" href="/catalogo/CatalogoMultimedia.html">Multimedia</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0)">Contacto</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0)">Preguntas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/cliente/FichaPerfil.html">Perfil</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="text" id="buscarModal" placeholder="Buscar" style="border-radius: 50px;">
-                        </form>
-                    </div>
-                </div>
-            </nav>
             <div class="modal-body" style="background-image: url('img/un-aplauso-para-las-librerias.jpg'); background-size: cover;)">
                 <div style="background-color: rgba(0, 0, 0, 0.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                     <div class="container-fluid">
@@ -169,7 +135,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-6 my-5 d-flex justify-content-md-end justify-content-center">
-                                    <a type="button" href="/index.html" class="btn btncancelar mx-5 w-50 fs-1 btn">Cancelar</a>
+                                    <a type="button" href="#" class="btn btncancelar mx-5 w-50 fs-1 btn" data-bs-dismiss="modal">Cancelar</a>
                                 </div>
                                 <div class="col-md-6 my-5 d-flex justify-content-md-start justify-content-center">
                                     <a type="button" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" class="btn btncontinuars mx-5 w-50 fs-1 btn">Continuar</a>
@@ -193,40 +159,6 @@
 <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
     <div class="modal-dialog modal-fullscreen modal-dialog-centered">
         <div class="modal-content">
-            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #862F2F;">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="/index.html">
-                        <img src="/img/logo.png" alt="Logo" style="border-radius: 20px;">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar2">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="mynavbar2">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Catálogo</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/catalogo/Catalogo.html">Consulta</a></li>
-                                    <li><a class="dropdown-item" href="/catalogo/CatalogoLibros.html">Libros</a></li>
-                                    <li><a class="dropdown-item" href="/catalogo/CatalogoMultimedia.html">Multimedia</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0)">Contacto</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0)">Preguntas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/cliente/FichaPerfil.html">Perfil</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="text" id="buscar2" placeholder="Buscar" style="border-radius: 50px;">
-                        </form>
-                    </div>
-                </div>
-            </nav>
             <div class="modal-body" style="background-image: url('img/un-aplauso-para-las-librerias.jpg'); background-size: cover;">
                 <div class="container-fluid">
                     <h1 class="text-center my-5 display-1 titulo" style="font-weight: normal">Registro</h1>
@@ -266,9 +198,6 @@
         </div>
     </div>
 </div>
-
-<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
-
 <!--modal-->
 <!-- The Modal -->
 <div class="modal fade" id="myModal">
@@ -279,11 +208,11 @@
                     <div class="col-12 d-flex justify-content-center">
                         <form action="#">
                             <div class="row justify-content-center formulario mb-3">
-                                <label for="rut" class="fs-4">Rut</label>
+                                <label for="rut" class="fs-4" style="color: #000000">Rut</label>
                                 <input type="text" class="form-control fs-4" id="rut" name="rut" style="border-radius: 3.125rem">
                             </div>
                             <div class="row justify-content-center formulario mt-3">
-                                <label for="contraseña" class="fs-4">Contraseña</label>
+                                <label for="contraseña" class="fs-4" style="color: #000000">Contraseña</label>
                                 <input type="password" class="form-control fs-4" id="contraseña" name="contraseña" style="border-radius: 3.125rem">
                             </div>
                         </form>
@@ -298,7 +227,9 @@
                     </div>
                 </div>
                 <div class="texto-inicio text-center">
-                    <h5>¿No tienes una cuenta? ¡<a href="login/signup.html">Crea una!</a> </h5>
+                    <div class="texto-inicio text-center">
+                        <h5>¿No tienes una cuenta? ¡<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Crea una!</a></h5>
+                    </div>
                 </div>
             </div>
         </div>
