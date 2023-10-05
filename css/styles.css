@@ -1,4 +1,9 @@
-
+body.is-transitioned {
+	animation: fade-in 2s forwards;
+	background-color: rgba(0,0,0,0.25);
+	opacity: 0;
+	transform: translateY(2vh);
+}
 .bg-custom-color {
 	background-color: rgba(134.00000721216202, 47.0000009983778, 47.0000009983778, 1);
 }
@@ -47,3 +52,17 @@
 	font-family: 'Poppins', 'SansSerif', Times, serif;
 	color: #ffffff;
 }
+@keyframes fade-in{
+	from{
+		background-color: rgba(0,0,0,0.25);
+		opacity: 0;
+		transform: translateY(2vh);
+	}
+	to{
+		background-color: rgba(0,0,0,0);
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+}
+

@@ -42,7 +42,7 @@
     </style>
 </head>
 
-<body>
+<body class="is-transitioned">
 <header>
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #862F2F;">
         <div class="container-fluid">
@@ -111,10 +111,11 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-fullscreen modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-body" style="background-image: url('img/un-aplauso-para-las-librerias.jpg'); background-size: cover;)">
+            <div class="modal-body" style="background-image: url('img/un-aplauso-para-las-librerias.jpg'); background-size: cover;">
                 <div style="background-color: rgba(0, 0, 0, 0.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                     <div class="container-fluid">
                         <h1 class="text-center my-5 display-1 titulo" style="font-weight: normal">Registro</h1>
@@ -156,41 +157,245 @@
     </div>
 </div>
 
-<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+<div class="modal" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
     <div class="modal-dialog modal-fullscreen modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body" style="background-image: url('img/un-aplauso-para-las-librerias.jpg'); background-size: cover;">
-                <div class="container-fluid">
-                    <h1 class="text-center my-5 display-1 titulo" style="font-weight: normal">Registro</h1>
-                    <div class="row justify-content-center my-5">
-                        <div class="col-lg-3">
-                            <form action="#">
-                                <div class="row justify-content-center formulario mb-3">
-                                    <label for="rut" class="fs-1">Rut</label>
-                                    <input type="text" class="form-control1 fs-1" id="rutModal" name="rut" style="height: 95px">
+                <div style="background-color: rgba(0, 0, 0, 0.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    <div class="container-fluid">
+                        <h1 class="text-center my-5 display-1 titulo" style="font-weight: normal">Registro</h1>
+                        <div class="row justify-content-center my-5">
+                            <div class="col-lg-3">
+                                <form action="#">
+                                    <div class="row justify-content-center formulario mb-3">
+                                        <label for="rut" class="fs-1">Rut</label>
+                                        <input type="text" class="form-control1 fs-1" id="rutModal" name="rut" style="height: 95px">
+                                    </div>
+                                    <div class="row justify-content-center formulario mt-3">
+                                        <label for="direccion" class="fs-1">Direccion</label>
+                                        <input type="text" class="form-control1 fs-1" id="direccion" name="direccion" style="height: 95px">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 my-5 d-flex justify-content-md-end justify-content-center">
+                                    <a type="button" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btncancelar mx-5 w-50 fs-1 btn-lg">Volver</a>
                                 </div>
-                                <div class="row justify-content-center formulario mt-3">
-                                    <label for="direccion" class="fs-1">Direccion</label>
-                                    <input type="text" class="form-control1 fs-1" id="direccion" name="direccion" style="height: 95px">
+                                <div class="col-md-6 my-5 d-flex justify-content-md-start justify-content-center">
+                                    <a type="button" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" class="btn btncontinuars mx-5 w-50 fs-1 btn">Continuar</a>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-6 my-5 d-flex justify-content-md-end justify-content-center">
-                                <a type="button" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btncancelar mx-5 w-50 fs-1 btn-lg">Volver</a>
-                            </div>
-                            <div class="col-md-6 my-5 d-flex justify-content-md-start justify-content-center">
-                                <a type="button" href="#" class="btn btncontinuars mx-5 w-50 fs-1 btn-lg">Continuar</a>
+                    <div class="row fixed-bottom mb-0">
+                        <div class="col">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 25%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row fixed-bottom mb-0">
-                    <div class="col">
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 25%"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body" style="background-image: url('img/un-aplauso-para-las-librerias.jpg'); background-size: cover;">
+                <div style="background-color: rgba(0, 0, 0, 0.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    <div class="container-fluid">
+                        <h1 class="text-center my-5 display-1 titulo" style="font-weight: normal">Registro</h1>
+                        <div class="row justify-content-center my-5">
+                            <div class="col-lg-3">
+                                <form action="#">
+                                    <div class="row justify-content-center formulario mb-3">
+                                        <label for="telefono" class="fs-1">Telefono</label>
+                                        <input type="text" class="form-control1 fs-1" id="telefono" name="rut" style="height: 95px">
+                                    </div>
+                                    <div class="row justify-content-center formulario mt-3">
+                                        <label for="correo" class="fs-1">Correo Electronico</label>
+                                        <input type="text" class="form-control1 fs-1" id="correo" name="direccion" style="height: 95px">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 my-5 d-flex justify-content-md-end justify-content-center">
+                                    <a type="button" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" class="btn btncancelar mx-5 w-50 fs-1 btn-lg">Volver</a>
+                                </div>
+                                <div class="col-md-6 my-5 d-flex justify-content-md-start justify-content-center">
+                                    <a type="button" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" class="btn btncontinuars mx-5 w-50 fs-1 btn">Continuar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row fixed-bottom mb-0">
+                        <div class="col">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body" style="background-image: url('img/un-aplauso-para-las-librerias.jpg'); background-size: cover;">
+                <div style="background-color: rgba(0, 0, 0, 0.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    <div class="container-fluid">
+                        <h1 class="text-center my-5 display-1 titulo" style="font-weight: normal">Registro</h1>
+                        <div class="row justify-content-center my-5">
+                            <div class="col-lg-3">
+                                <form action="#">
+                                    <div class="row justify-content-center formulario mb-3">
+                                        <label for="password" class="fs-1">Contraseña</label>
+                                        <input type="password" class="form-control1 fs-1" id="password" name="rut" style="height: 95px">
+                                    </div>
+                                    <div class="row justify-content-center formulario mt-3">
+                                        <label for="Cpassword" class="fs-1">Verificar contraseña</label>
+                                        <input type="password" class="form-control1 fs-1" id="Cpassword" name="direccion" style="height: 95px">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 my-5 d-flex justify-content-md-end justify-content-center">
+                                    <a type="button" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" class="btn btncancelar mx-5 w-50 fs-1 btn-lg">Volver</a>
+                                </div>
+                                <div class="col-md-6 my-5 d-flex justify-content-md-start justify-content-center">
+                                    <a type="button" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal" class="btn btncontinuars mx-5 w-50 fs-1 btn">Continuar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row fixed-bottom mb-0">
+                        <div class="col">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 98%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body" style="background-image: url('img/un-aplauso-para-las-librerias.jpg'); background-size: cover;">
+                <div style="background-color: rgba(0, 0, 0, 0.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    <div class="row justify-content-center me-0">
+                        <div class="col-lg-2 col-md-3 col-sm-6 my-5 d-flex justify-content-center">
+                            <div class="card mx-5 mb-4">
+                                <div class="card-body text-center">
+                                    <img src="/img/img_avatar1.png" alt="avatar" class="rounded img-fluid">
+                                    <h5 class="my-2">Alexis Sanchez</h5>
+                                    <p class="text-muted my-1">Extra</p>
+                                    <p class="text-muted my-1">Extra</p>
+                                    <button type="button" class="file btn my-2 btn-success " data-bs-toggle="modal" data-bs-target="#imgupload">Actualizar Foto</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-9 col-sm-6 my-5">
+                            <div class="card mx-5 mb-4">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <p class="mb-0">Nombre Completo</p>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="text-muted mb-0">Alexis Sanchez</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <p class="mb-0">Correo</p>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="text-muted mb-0">niñomaravilla2015@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <p class="mb-0">Telefono</p>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="text-muted mb-0">9 6969 6669</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <p class="mb-0">Rut</p>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="text-muted mb-0">16.927.586-6</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <p class="mb-0">Direccion</p>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="text-muted mb-0">Tocopilla, donde sea que quede</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 my-5 d-flex justify-content-md-end justify-content-center">
+                                    <a type="button" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" class="btn btncancelar mx-5 w-50 fs-1 btn-lg">Volver</a>
+                                </div>
+                                <div class="col-md-6 my-5 d-flex justify-content-md-start justify-content-center">
+                                    <a type="button" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal" class="btn btncontinuars mx-5 w-50 fs-1 btn">Continuar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row fixed-bottom mb-0">
+                        <div class="col">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 98%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="background-filter" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.35); z-index: -1;"></div>
+
+                    <div class="modal fade" id="imgupload">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="mb-4 d-flex justify-content-center">
+                                            <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" alt="example placeholder" class="img-fluid"/>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="btn btn-primary btn-rounded">
+                                            <label class="form-label text-white m-1" for="customFile1">Subir Imagen</label>
+                                            <input type="file" class="form-control d-none" id="customFile1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -236,4 +441,5 @@
     </div>
 </div>
 </body>
+
 </html>
